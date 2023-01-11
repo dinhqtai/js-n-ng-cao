@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const lol = {
+            doi1: 'tai',
+            doi2: 'tai2',
+            nguoichoi: [
+                [
+                    'ta1 ',
+                    'ta2',
+                    'ta3'
+                ],
+                [
+                    'ta4',
+                    'ta5',
+                    'ta6'
+                ],
+            ],
+            score: '2:0',
+            scored: ['ta1', 't2', 'ta3', 'ta4'],
+            odds: {
+                doi1: 2,
+                x: 3,
+                doi2: 6,
+            },
+        };
+        const [nguoichoi1, nguoichoi2] = lol.nguoichoi;
+        console.log(nguoichoi1, nguoichoi2);
+        const [gk, ...fielnguoichoi] = nguoichoi1;
+        console.log(gk, fielnguoichoi);
+        const allnguoichoi = [...nguoichoi1, ...nguoichoi2];
+        console.log(allnguoichoi);
+        const nguoichoi1Final = [...nguoichoi1, 'ta1', 'ta2', 'ta3'];
+        const {
+            odds: { doi1, x: draw, doi2 },
+        } = lol;
+        console.log(doi1, draw, doi2);
+        const printGoals = function (...nguoichoi) {
+            console.log(nguoichoi);
+            console.log('${nguoichoi.lenght} ');
+        };
+        printGoals(...lol.scored);
+        doi1 < doi2 && console.log('doi1 thang');
+
+        doi1 > doi2 && console.log('doi2 thang');
+
+
+    </script>
+</body>
+
+</html>
