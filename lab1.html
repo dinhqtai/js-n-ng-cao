@@ -10,7 +10,7 @@
 
 <body>
     <script>
-        const lol = {
+        const game = {
             doi1: 'tai',
             doi2: 'tai2',
             nguoichoi: [
@@ -33,7 +33,7 @@
                 doi2: 6,
             },
         };
-        const [nguoichoi1, nguoichoi2] = lol.nguoichoi;
+        const [nguoichoi1, nguoichoi2] = game.nguoichoi;
         console.log(nguoichoi1, nguoichoi2);
         const [gk, ...fielnguoichoi] = nguoichoi1;
         console.log(gk, fielnguoichoi);
@@ -42,13 +42,13 @@
         const nguoichoi1Final = [...nguoichoi1, 'ta1', 'ta2', 'ta3'];
         const {
             odds: { doi1, x: draw, doi2 },
-        } = lol;
+        } = game;
         console.log(doi1, draw, doi2);
         const printGoals = function (...nguoichoi) {
             console.log(nguoichoi);
             console.log('${nguoichoi.lenght} ');
         };
-        printGoals(...lol.scored);
+        printGoals(...game.scored);
         doi1 < doi2 && console.log('doi1 thang');
 
         doi1 > doi2 && console.log('doi2 thang');
